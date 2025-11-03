@@ -130,7 +130,7 @@ function playfairEncrypt(key, msg, filler = "X", showMatrix = false) {
 
     if (ra === rb) { // same line, on right
       return grid[ra][(ca + 1) % COLS] + grid[rb][(cb + 1) % COLS];
-    } else if (ca === cb) { // aceeași coloană → jos
+    } else if (ca === cb) { // same column, down
       return grid[(ra + 1) % ROWS][ca] + grid[(rb + 1) % ROWS][cb];
     } else { // crossed column
       return grid[ra][cb] + grid[rb][ca];
